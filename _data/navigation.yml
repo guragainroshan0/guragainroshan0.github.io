@@ -7,3 +7,9 @@ main:
     url: /tags/
   - title: "About"
     url: /about/
+
+docs:
+  - title: Docker
+    children:
+      - title: "Basics of docker"
+        url: /docker/docker_getting_started/
