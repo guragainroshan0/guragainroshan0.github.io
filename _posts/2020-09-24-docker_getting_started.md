@@ -23,7 +23,7 @@ Containers solve this problem. You may be thinking the same thing could be done 
 
 ![/assets/images/docker/getting-started/first-post/Untitled%201.png](/assets/images/docker/getting-started/first-post/Untitled%201.png)
 
-                                    Fig: Virtual Machine \(Source [docker](https://www.docker.com/sites/default/files/d8/2018-11/container-vm-whatcontainer_2.png)\)
+ Fig: Virtual Machine Source [docker](https://www.docker.com/sites/default/files/d8/2018-11/container-vm-whatcontainer_2.png)
 
 **Virtual Machines are an abstraction of physical hardware turning one machine into many machines**. A virtual machine is a virtual environment that functions as a virtual computer system with its own CPU, memory, network interface, and storage on the physical hardware system. Virtualization allows you to run two completely different OSes on the same hardware. 
 
@@ -113,7 +113,7 @@ Docker Engine is a client-server application with these major components:
 
 ![/assets/images/docker/getting-started/first-post/Untitled%203.png](/assets/images/docker/getting-started/first-post/Untitled%203.png)
 
-                                            Fig: Docker engine architecture  \([source](https://docs.docker.com/engine/images/engine-components-flow.png)\)
+Fig: Docker engine architecture  \([source](https://docs.docker.com/engine/images/engine-components-flow.png)\)
 
 The CLI uses the Docker REST API to control or interact with the Docker daemon through scripting or direct CLI commands. Many other Docker applications use the underlying API and CLI.
 
