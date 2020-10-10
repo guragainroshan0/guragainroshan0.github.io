@@ -1,11 +1,11 @@
 ---
 title: "Getting started with Docker"
-last_modified_at: 2020-09-12T14:40:02-05:00
+last_modified_at: 2020-09-24T14:40:02-05:00
 categories:
-  - docker
+  - Docker
 author_profile: false
 tags:
-  - virtualization
+  - Virtualization
   - Docker
 ---
 
