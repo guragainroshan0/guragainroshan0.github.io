@@ -13,3 +13,24 @@ docs:
     children:
       - title: "Basics of docker"
         url: /docker/docker_getting_started/
+
+  - title: OverTheWire
+    children:
+      - title: "RedTiger"
+        url: /overthewire/redtiger-overthewire-sqli/
+      - title: "Bandit"
+        url: /overthewire/bandit-overthewire-linux/
+      - title: "Natas"
+        url: /overthewire/natas-overthewire-web/
+    
+  
+
+  - title: HackTheBox
+    children:
+      - title: "Cache"
+        url: /htb/Cache-HTB-writeup/
+
+  - title: TryHackMe
+    children:
+      - title: "Tmux"
+        url: /tryhackme/tmux-tryhackme/
