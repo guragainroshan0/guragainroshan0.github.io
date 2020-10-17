@@ -34,6 +34,5 @@ docs:
     children:
       - title: "Tmux"
         url: /tryhackme/tmux-tryhackme/
-    children:
       - title: "Revenge"
         url: /tryhackme/revenge-tryhackme/
