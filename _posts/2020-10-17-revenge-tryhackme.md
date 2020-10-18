@@ -9,6 +9,7 @@ tags:
   - SQLMap
   - Privilege Escalation
   - linux 
+  - Flask
   - TryHackMe
 ---
 

