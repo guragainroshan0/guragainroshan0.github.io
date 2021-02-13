@@ -1,15 +1,5 @@
----
-title: "Anonymous Playground : TryHackMe"
-last_modified_at: 2021-02-13
-categories:
-  - TryHackMe
-author_profile: false
-tags:
-  - cipher
-  - python
-  - linux 
-  - TryHackMe
----
+
+# Anonymous Playground: THM writeup
 
 Want to become part of Anonymous? They have a challenge for you. Can you get the flags and become an operative?
 
