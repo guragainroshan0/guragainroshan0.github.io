@@ -37,4 +37,6 @@ docs:
       - title: "Revenge"
         url: /tryhackme/revenge-tryhackme/
       - title: "The Marketplace"
-        url: /tryhackme/the-marketplace-tryhackme/        
+        url: /tryhackme/the-marketplace-tryhackme/    
+      - title: "en_pass"
+        url: /tryhackme/em_pass/       
