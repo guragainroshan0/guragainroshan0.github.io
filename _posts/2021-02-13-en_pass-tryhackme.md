@@ -11,9 +11,7 @@ tags:
   - enumeration
   - TryHackMe
 ---
-# En_Pass
-
-Get what you can't.
+> Get what you can't.
 
 ![/assets/images/TryHackMe/en_pass/Untitled.png](/assets/images/TryHackMe/en_pass/Untitled.png)
 
