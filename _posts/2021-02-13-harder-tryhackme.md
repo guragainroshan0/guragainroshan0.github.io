@@ -1,6 +1,6 @@
 ---
-title: "Tmux : TryHackMe"
-last_modified_at: 2020-10-13T14:40:02-05:00
+title: "Harder : TryHackMe"
+last_modified_at: 2021-02-13
 categories:
   - TryHackMe
 author_profile: false
