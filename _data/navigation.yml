@@ -48,6 +48,8 @@ docs:
         url: /tryhackme/help-bears-tryhackme/   
       - title: "Anonymous Playground"
         url: /tryhackme/anonymous-playground-tryhackme/  
+      - title: "Recovery"
+        url: /tryhackme/recovery-tryhackme/  
       - title: "The Marketplace"
         url: /tryhackme/the-marketplace-tryhackme/    
       - title: "En Pass"
