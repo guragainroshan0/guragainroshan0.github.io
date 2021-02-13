@@ -1,6 +1,8 @@
 ---
 title: "En Pass : TryHackMe"
 last_modified_at: 2021-02-13
+header:
+  teaser: /assets/images/TryHackMe/en_pass/Untitled.png
 categories:
   - TryHackMe
 author_profile: false
