@@ -33,6 +33,8 @@ docs:
         url: /htb/Doctor-HTB-writeup/
       - title: "Unbalanced"
         url: /htb/Unbalanced-HTB-writeup/
+      - title: "Blunder"
+        url: /htb/Blunder-HTB-writeup/
 
   - title: TryHackMe
     children:
