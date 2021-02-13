@@ -44,6 +44,10 @@ docs:
         url: /tryhackme/harder-tryhackme/    
       - title: "Revenge"
         url: /tryhackme/revenge-tryhackme/
+      - title: "Help Bears"
+        url: /tryhackme/help-bears-tryhackme/   
+      - title: "Anonymous Playground"
+        url: /tryhackme/anonymous-playground-tryhackme/  
       - title: "The Marketplace"
         url: /tryhackme/the-marketplace-tryhackme/    
       - title: "En Pass"
