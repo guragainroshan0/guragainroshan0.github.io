@@ -16,7 +16,7 @@
 title: Rogi's Blog 
 email: guragainroshan0@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Contains writeups of CTF's, THM rooms , HTB boxes and mauch more.
+  Contains writeups of CTF's, THM rooms , HTB boxes and much more.
 twitter_username: username
 github_username: guragainroshan0
 minimal_mistakes_skin: default
@@ -63,9 +63,9 @@ author:
     #- label: "Website"
     #  icon: "fas fa-fw fa-link"
     #  url: "https://"
-    #- label: "Twitter"
-    #  icon: "fab fa-fw fa-twitter-square"
-    #  url: "https://twitter.com/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/rogi910"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/guragainroshan0"

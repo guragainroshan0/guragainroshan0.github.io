@@ -29,6 +29,8 @@ docs:
     children:
       - title: "Cache"
         url: /htb/Cache-HTB-writeup/
+      - title: "Doctor"
+        url: /htb/Doctor-HTB-writeup/
 
   - title: TryHackMe
     children:
