@@ -22,11 +22,11 @@ docs:
         url: /overthewire/bandit-overthewire-linux/
       - title: "Natas"
         url: /overthewire/natas-overthewire-web/
-        
+
   - title: CTF 
     children:
       - title: "H@cktivityCon Mobile Challenges"
-        url: /ctf/hacktivity-con-mobile
+        url: /ctf/hacktivity-con-mobile/
 
 
   - title: HackTheBox
