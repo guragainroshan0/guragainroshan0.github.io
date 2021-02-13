@@ -31,6 +31,8 @@ docs:
         url: /htb/Cache-HTB-writeup/
       - title: "Doctor"
         url: /htb/Doctor-HTB-writeup/
+      - title: "Unbalanced"
+        url: /htb/Unbalanced-HTB-writeup/
 
   - title: TryHackMe
     children:
