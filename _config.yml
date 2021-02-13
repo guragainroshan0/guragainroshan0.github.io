@@ -17,7 +17,7 @@ title: Rogi's Blog
 email: guragainroshan0@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Contains writeups of CTF's, THM rooms , HTB boxes and much more.
-twitter_username: username
+twitter_username: rogi910
 github_username: guragainroshan0
 minimal_mistakes_skin: default
 search: true
@@ -117,3 +117,10 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-135706956-1"
+    anonymize_ip: false
