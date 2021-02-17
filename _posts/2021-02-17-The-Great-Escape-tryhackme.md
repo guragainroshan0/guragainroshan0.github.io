@@ -21,7 +21,7 @@ tags:
 
 First added the IP to hosts file
 
-<ip> : escape.thm
+```<ip> : escape.thm```
 
 ## Nmap
 
