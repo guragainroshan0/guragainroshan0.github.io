@@ -6,6 +6,7 @@ categories:
 author_profile: true
 toc: true
 toc_label: Section
+toc_sticky: false
 tags:
   - SQL Injection
   - XSS
