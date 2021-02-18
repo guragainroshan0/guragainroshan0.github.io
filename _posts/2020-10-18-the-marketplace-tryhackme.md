@@ -3,7 +3,7 @@ title: "The Marketplace : TryHackMe"
 last_modified_at: 2020-10-18ET14:40:02-05:00
 categories:
   - TryHackMe
-author_profile: true
+author_profile: false
 toc: true
 toc_label: Section
 toc_sticky: false

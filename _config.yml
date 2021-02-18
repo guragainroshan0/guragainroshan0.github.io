@@ -88,13 +88,16 @@ author:
     #  icon: "fab fa-fw fa-instagram"
      # url: "https://instagram.com/"
 
+pagination: 10
+
 defaults:
   # _posts
   - scope:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: wide
+      toc: true
       author_profile: false
       read_time: true
       comments: true
