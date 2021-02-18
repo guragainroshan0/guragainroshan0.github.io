@@ -122,5 +122,5 @@ tag_archive:
 analytics:
   provider: "google-gtag"
   google:
-    tracking_id: "UA-135706956-1"
+    tracking_id: "G-LDP9QLV7M8"
     anonymize_ip: false
