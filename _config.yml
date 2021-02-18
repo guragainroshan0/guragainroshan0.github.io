@@ -58,7 +58,7 @@ plugins:
 author:
   name   : "Roshan Guragain"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Wannabe hacker"
+  bio    : "A learner."
   links:
     #- label: "Website"
     #  icon: "fas fa-fw fa-link"
@@ -69,6 +69,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/guragainroshan0"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/rogi9/"
     #- label: "Instagram"
     #  icon: "fab fa-fw fa-instagram"
     #  url: "https://instagram.com/"

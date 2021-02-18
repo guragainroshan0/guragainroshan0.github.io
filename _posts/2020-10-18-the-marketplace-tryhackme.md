@@ -3,7 +3,9 @@ title: "The Marketplace : TryHackMe"
 last_modified_at: 2020-10-18ET14:40:02-05:00
 categories:
   - TryHackMe
-author_profile: false
+author_profile: true
+toc: true
+toc_label: Section
 tags:
   - SQL Injection
   - XSS
