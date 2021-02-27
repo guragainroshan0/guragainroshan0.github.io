@@ -4,6 +4,7 @@ last_modified_at: 2021-02-27
 categories:
   - HTB
 author_profile: false
+og_image: /assets/images/HTB/academy_htb/Untitled.png
 tags:
   - Linux Privilege Escalation
   - Vulnerable Web Application
