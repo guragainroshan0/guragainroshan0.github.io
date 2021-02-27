@@ -31,6 +31,8 @@ docs:
 
   - title: HackTheBox
     children:
+      - title: "Academy"
+        url: /htb/Academy-HTB-writeup/
       - title: "Cache"
         url: /htb/Cache-HTB-writeup/
       - title: "Doctor"
@@ -59,4 +61,4 @@ docs:
       - title: "En Pass"
         url: /tryhackme/en_pass-tryhackme/   
       - title: "The Great Escape"
-        url: /tryhackme/The-Great-Escape-tryhackme/       
+        url: /tryhackme/T[he-Great-Escape-tryhackme/       
