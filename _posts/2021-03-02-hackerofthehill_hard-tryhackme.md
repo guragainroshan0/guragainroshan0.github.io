@@ -2,7 +2,7 @@
 title: "THM: Hacker of the Hill (Hard) "
 last_modified_at: 2021-03-02
 categories:
-  - THM
+  - TryHackMe
 author_profile: false
 tags:
   - Linux Privilege Escalation
