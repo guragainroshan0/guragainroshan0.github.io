@@ -12,6 +12,8 @@ tags:
   - composer 
   - HTB
   - Writeup
+header:
+  teaser: /assets/images/HTB/academy_htb/Untitled.png
 ---
 
 Hack The Box's easy box with web enumeration, vulnerable website, audit logs
