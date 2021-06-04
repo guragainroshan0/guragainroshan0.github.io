@@ -16,8 +16,6 @@ docs:
 
   - title: OverTheWire
     children:
-      - title: "RedTiger"
-        url: /overthewire/redtiger-overthewire-sqli/
       - title: "Bandit"
         url: /overthewire/bandit-overthewire-linux/
       - title: "Natas"
