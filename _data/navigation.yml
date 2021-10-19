@@ -64,3 +64,10 @@ docs:
         url: /tryhackme/hackerofthehill_easy-tryhackme/      
       - title: "Hacker Of The Hill (Hard)"
         url: /tryhackme/hackerofthehill_hard-tryhackme/
+
+   - title: OSCP
+	children:
+		-title: "VulnHub"
+		children:
+			-title: "Symfonos 1"
+			 url: /vulnhub/Symfonos-1.md
