@@ -66,6 +66,6 @@ docs:
         url: /tryhackme/hackerofthehill_hard-tryhackme/
 
    - title: Vulnhub 
-    children:
+     children:
       - title: "Symfonos 1"
-	url: /vulnhub/Symfonos-1/
+        url: /vulnhub/Symfonos-1/
